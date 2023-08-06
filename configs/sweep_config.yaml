@@ -1,0 +1,17 @@
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - ${args}
+method: bayes
+metric:
+  name: val_acc
+  goal: maximize
+parameters:
+  batch_size:
+    "values": [2]
+  lr:
+    "values": [2]
+  seed:
+    "values": [2]
+program: train.py
